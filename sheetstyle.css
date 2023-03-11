@@ -1,0 +1,456 @@
+
+
+nav {
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(112 72 109);
+  color: white;
+  width: 100%;
+  border-radius: .3rem;
+  /* position: relative; */
+ 
+}
+
+/* LOGO */
+
+.logo {
+
+    font-size: 1rem;
+    padding: .5rem .3rem;
+
+}
+
+/* NAVBAR MENU */
+
+.menu {
+
+    display: flex;
+
+    gap: 1em;
+
+    font-size: 1rem;
+   
+}
+
+nav li:hover {
+
+    background-color: #307c90;
+
+    border-radius: .5rem;
+
+    transition: .5s ease;
+
+}
+
+nav li {
+
+    padding: .5rem .3rem;
+      list-style: none;
+    
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+/* brain scanner style */
+/* making grid to postion the brain photo to the left ot the main */
+.hero{
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    min-height: 100vh;
+    background:#0dcaf0;
+    /* background-size: cover; */
+  }
+/* specify the brain position */
+.scan{
+    margin-top:10rem ;
+    /* position: relative;  */
+      grid-area:1/1/2/2 ;
+   justify-self: center;
+   /* align-self: center; */
+   margin-bottom: 0;
+}
+/* give the 2 brain photos the same position and dimention,
+the relative position is  a must here  */
+/*  < حتى اجعل الصورتين تطبقان على بعضهما */
+.scan .face{
+    position:relative;
+    width: 14rem;
+    height:14rem;
+    background: url("images/brain4.png");
+    background-size:14rem ;
+}
+/* add animation to make the background photo that i assigned to ease in&out  
+by add a befor content to the brevious images , added a background befor it and give it animation*/
+.scan .face::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: url("images/brain5.png");
+    background-size: 14rem;
+    animation: brain 4s ease-in-out infinite;
+  }
+  /* add key frame to the move */
+  /* وضع فترات الطول وتقسيمها على الزمن */
+@keyframes brain{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+    
+}
+/* adding the line the sameway but after and making the background color not img */
+.scan .face::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: .4rem;
+    background:  #ccff00;;
+    border-radius: 1rem;
+    filter:drop-shadow(1rem 1rem 1rem  #ccff00 );
+    animation:animate-line 4s ease-in-out infinite;
+}
+@keyframes animate-line{
+    0%,100%
+    {
+        top: 0%;
+    }
+    50%
+    {
+        top:100%;
+    }
+}
+.scan h3{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-top: 1.5rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    /* margin-right:5rem; */
+    color: rgb(72, 41, 69);
+
+}
+
+.scan{
+    margin-left: 3rem;
+}
+
+
+.side{
+    grid-area: 1/2/2/4;
+ 
+/* position: relative; */
+/* bottom: 10rem; */
+margin-bottom: 0;
+color: #70486d;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+/* grid-template-rows: repeat(3,1fr); */
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+#container {
+    width: 70vw;
+    margin: 30vw auto;
+}
+
+.side h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    color: #fcff18;
+      letter-spacing: 8px;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+     /*Create overlap*/
+    
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+    
+    animation: glitch1 2.5s infinite;
+  }
+  
+  h1:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 2.5s infinite;
+  }
+  
+  h1:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 2.5s infinite;
+  }
+  /*Keyframes*/
+  
+  @keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-1deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glitch2 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(-2px, -3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(-5px, -2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(-5px, -1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(-2px, -6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+  
+  @keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(2px, 3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(5px, 2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(5px, 1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(2px, 6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+.first{
+    position:absolute;
+    bottom: 17rem;
+    /* margin-top: 9rem; */
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.aboutme{
+ margin-top:8rem;
+ margin-bottom: 11rem;
+ /* display: block; */
+}
+.glitch{
+position: relative;
+bottom:15rem;
+}
+#education{
+    background: #0dcaf0;
+    /* background-size: cover; */
+
+
+}
+#education img{
+    width: 8rem;
+    /* position:relative */
+}
+.edulist li{
+    display: inline-block;
+    text-align: center;
+    margin-top: 3rem;
+  
+}
+.edulist li:nth-child(2){
+    position:relative;
+    top:1.5rem
+}
+table{
+    /* border-radius: 5rem; */
+    /* border:solid; */
+    border-spacing: .5rem;
+    /* padding: 5rem; */
+    border-collapse: separate;
+}
+table td,th,tr{
+    border-radius: .5rem;
+    border: .2rem solid blue;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: white;
+    }
+.col-4{
+    position: relative;
+    bottom:5rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+.col-4 a{
+   padding: .5rem 2rem .5rem 2rem; 
+}
+.py-3{
+    font-size: 1.5rem;
+}
+.github img{
+  width: 3rem;
+  margin-right: 2rem;
+}
+.linkedin img{
+  width: 3rem;
+  margin-left: 0rem;
+}
+.footerlist li{
+display: inline-block;
+}
+.card{
+  text-align: center;
+}
+.footerlist{
+    margin-right: 2rem;
+}
+.footerlist img{
+    width: 2rem;
+}
+.footerlist p{
+    font-size: large;
+    font-weight: bold;
+}
