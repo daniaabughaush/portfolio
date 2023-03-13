@@ -473,7 +473,7 @@ table td,th,tr{
 }
 
 
-/* cards */
+/* cards my work*/
 .card{
   text-align: center;
 }
@@ -501,6 +501,9 @@ table td,th,tr{
   border-top: hidden;
 border-color: #307C90;
 border-top-right-radius: 3rem;
+}
+.card-img-top:hover{
+   box-shadow: .3rem .3rem #67f3da;
 }
 /* footer */
 
@@ -531,12 +534,16 @@ footer{
   color:white
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
-
+.footerlist  img:hover{
+  background-color:  #67f3da;
+  box-shadow: .2rem .2rem white;
+}
 /* reponsive media */
 @media only screen and (max-width:1000px) {
   .hero {
   background-color: white;
-    }
+  display: block;
+        }
    .first{
     color:#307C90;
 font-size: 1rem;
@@ -558,5 +565,29 @@ visibility: hidden;
    .mywork,.aboutme{
     margin-left: 5rem;
    }
+   .scan .face{
+       width: 14rem;
+    height:14rem;
+       background-size:14rem ;
+}
 
+.scan .face::before{
+  background-size: 14rem;
+  }
+  
+  .profileimg img{
+    width:14rem;
+  }
+  .aboutme{
+    margin: 0;
+  }
+  .footerlist img{
+    background-color: #307C90;
+  }
+  .cardfooter{
+    background-color: white;
+  }
+  .face h3{
+    margin: 0;
+  }
   }
