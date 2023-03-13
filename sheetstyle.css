@@ -384,6 +384,10 @@ grid-template-columns: repeat(3,1fr);
   .down img{
     width: 6rem;
   }
+  .down img:hover{
+    background-color:  #67f3da;
+    border-radius: 3rem;
+  }
 
   /* --------------------------------------------------------------------------------------------------------------------------------*/
   /* about me section */
@@ -563,7 +567,7 @@ font-size: 1rem;
 visibility: hidden;
    }
    .mywork,.aboutme{
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
    }
    .scan .face{
        width: 14rem;
@@ -586,6 +590,7 @@ visibility: hidden;
   }
   .cardfooter{
     background-color: white;
+    color:#307C90
   }
   .face h3{
     margin: 0;
