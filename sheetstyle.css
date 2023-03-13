@@ -546,8 +546,9 @@ footer{
 @media only screen and (max-width:1000px) {
   .hero {
   background-color: white;
-  display: block;
-        }
+  display: flex;
+  flex-direction: column;
+            }
    .first{
     color:#307C90;
 font-size: 1rem;
@@ -597,20 +598,19 @@ visibility: hidden;
   .face h3{
     margin: 0;
   }
-  }
   .scan{
     margin-top: 10rem;
+    
   }
   .container{
   width:7rem;
   margin: 0;
   padding: 0;
- }
-  @media  (max-width:600px) {
+}
+.side{
+  margin: 0;
+}
+  }
 
 
-
-
-
-  }  
  
