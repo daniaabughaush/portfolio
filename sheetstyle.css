@@ -532,3 +532,31 @@ footer{
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
 
+/* reponsive media */
+@media only screen and (max-width:1000px) {
+  .hero {
+  background-color: white;
+    }
+   .first{
+    color:#307C90;
+font-size: 1rem;
+
+  }
+  .side{
+    margin-top: 0;
+  }
+     .glitch,.down{
+    display: none;
+    visibility: hidden;
+      }
+   #education{
+    background-color: white;
+   }
+   #education img{
+visibility: hidden;
+   }
+   .mywork,.aboutme{
+    margin-left: 5rem;
+   }
+
+  }
