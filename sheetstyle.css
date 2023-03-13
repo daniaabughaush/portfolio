@@ -566,8 +566,9 @@ font-size: 1rem;
    #education img{
 visibility: hidden;
    }
-   .mywork,.aboutme{
-    /* margin-left: 5rem; */
+   .meArticle article{
+    width: 20rem;
+  
    }
    .scan .face{
        width: 14rem;
@@ -584,6 +585,7 @@ visibility: hidden;
   }
   .aboutme{
     margin: 0;
+    text-align: center;
   }
   .footerlist img{
     background-color: #307C90;
@@ -596,3 +598,19 @@ visibility: hidden;
     margin: 0;
   }
   }
+  .scan{
+    margin-top: 10rem;
+  }
+  .container{
+  width:7rem;
+  margin: 0;
+  padding: 0;
+ }
+  @media  (max-width:600px) {
+
+
+
+
+
+  }  
+ 
