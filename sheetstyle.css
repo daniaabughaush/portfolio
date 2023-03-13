@@ -1,4 +1,6 @@
-
+html{
+scroll-behavior: smooth;
+}
 /* header */
 /* nav styling */
 nav {
@@ -74,7 +76,7 @@ nav li {
   }
 /* specify the hero img position */
 .scan{
-      grid-area:1/1/4/2 ;
+   grid-area:1/1/4/2 ;
    justify-self: center;
    align-self: center;
 }
@@ -413,10 +415,13 @@ grid-template-columns: repeat(3,1fr);
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* education section */
 #education{
-    background: #307C90;
+   
     color:white;
     padding-top: 2rem;
 
+}
+.background{
+  background: #307C90;
 }
 
 .edulist li{
@@ -425,14 +430,14 @@ grid-template-columns: repeat(3,1fr);
   /* margin-top: 3rem; */
 }
 
-#education img{
+.background img{
     width: 8rem;
     align-self:flex-start ;
     /* margin-bottom: .5rem; */
     /* position:relative */
     
 }
-#education h2{
+.background h2{
   font-size: 1.5rem;
 }
 
@@ -483,6 +488,9 @@ table td,th,tr{
 }
 .btn{
   background-color: #307C90;
+}
+.btn:hover{
+  background-color: #67f3da;
 }
 .mywork h2{
   text-align: center;
@@ -561,11 +569,8 @@ font-size: 1rem;
     display: none;
     visibility: hidden;
       }
-   #education{
-    background-color: white;
-   }
-   #education img{
-visibility: hidden;
+   .background{
+    color:white
    }
    .meArticle article{
     width: 20rem;
@@ -606,10 +611,15 @@ visibility: hidden;
   width:7rem;
   margin: 0;
   padding: 0;
-}
+
+  }
 .side{
   margin: 0;
 }
+.navbar li{
+  font-size: .5rem;
+}
+
   }
 
 
