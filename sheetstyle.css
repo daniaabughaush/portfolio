@@ -40,7 +40,7 @@ nav {
     gap: 1em;
 
     font-size: 1rem;
-   
+   margin-right: 2rem;
 }
 
 nav li:hover {
@@ -62,6 +62,7 @@ nav li {
 .menu a{
     color: white;
     text-decoration: none;
+   
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
@@ -171,23 +172,24 @@ by add a befor content to the brevious images , added a background befor it and 
 
 .side{
 grid-area: 1/2/4/4;
-margin-top:15rem ;
+margin-top:5rem ;
 color: #70486d;
 display: grid;
 grid-template-rows: repeat(3,1fr);
 grid-template-columns: repeat(3,1fr);
+align-items: flex-end;
+gap:1.6rem
 }
 /* the glitching article effect */
 #container {
     width: 70vw;
+    margin: 0;
     /* justify-content: flex-end; */
    }
    .scanning{
-    grid-area: 1/1/2/4;
-    padding-bottom: 3rem;
-    align-self: flex-start;
-    justify-self: flex-start;
-   }
+    grid-area: 1/2/2/4;
+   
+      }
    /* article in the side */
    .first{
     grid-area: 2/1/3/4;
@@ -196,7 +198,7 @@ grid-template-columns: repeat(3,1fr);
     font-size:1.5rem;
     color:aliceblue;
     text-align: center;
-    width: 75%;
+    width: 55%;
    }
 
 .side h1{
@@ -394,8 +396,14 @@ grid-template-columns: repeat(3,1fr);
     width: 6rem;
   }
   .down img:hover{
-    background-color:  #67f3da;
-    border-radius: 3rem;
+    width: 150px;
+    -webkit-filter: drop-shadow(5px 5px 5px #d8ef06);
+    filter: drop-shadow(5px 5px 5px #d8ef06);
+  }
+  .down{
+   grid-area:3/2/4/3 ;
+   align-self: flex-end;
+   justify-self: center;
   }
 
   /* --------------------------------------------------------------------------------------------------------------------------------*/
@@ -407,16 +415,41 @@ grid-template-columns: repeat(3,1fr);
 }
 .aboutme article{
   font-size:1.5rem;
-}
-.aboutme h2{
+ }
+/* .aboutme h2{
   font-size: 2.5rem;
-}
+} */
 .aboutme{
   color:#307C90;
   font-size: 2rem;
 }
 .profileimg img{
-  width:28rem
+  text-align: center;
+  /* animation: glow 1s ease-in-out infinite alternate; */
+  width:28rem;
+
+	-webkit-filter: drop-shadow(0px 0px 4px#fbff00);
+	-webkit-transition: all 1s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+
+  .glow {
+  font-size: 2rem;
+    color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes glow {
+  from{
+    text-shadow: 0 0 20px #fff, 0 0 30px #087990, 0 0 40px #087990, 0 0 50px #087990, 0 0 60px #087990, 0 0 70px #087990, 0 0 80px #087990;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px  #fff, 0 0 30px #fbff00, 0 0 40px #fbff00, 0 0 50px #fbff00, 0 0 60px #fbff00, 0 0 70px #fbff00;
+  }
+  
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
@@ -428,7 +461,7 @@ grid-template-columns: repeat(3,1fr);
 
 }
 .background{
-  background: #307C90;
+  /* background: #307C90; */
 }
 
 .edulist li{
@@ -455,9 +488,9 @@ grid-template-columns: repeat(3,1fr);
 table{
     /* border-radius: 5rem; */
     /* border:solid; */
-    border-spacing: .5rem;
+    border-spacing: .5rem !important;
     /* padding: 5rem; */
-    border-collapse: separate;
+    border-collapse: separate !important;
     
 }
 table td,th,tr{
@@ -486,7 +519,9 @@ table td,th,tr{
   gap: .4rem;
   
 }
-
+.card-btn{
+  background-color: #027e97 !important;
+}
 
 /* cards mywork/my project and in footer*/
 .card{
@@ -507,9 +542,7 @@ margin-right: 9rem;
 .mywork{
   margin-left: 9rem;
 }
-.qulifiqation{
-  background-color: #307c90;
-}
+
 .card img{
   height:12rem;
 
@@ -563,6 +596,18 @@ footer{
   background-color:  #67f3da;
   box-shadow: .2rem .2rem white;
 }
+.background1,.background2,.background3{
+  background-color: #087990;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+.qulifiqation h1{
+  font-size: 2rem;
+  text-align: center;
+  font-family: cursive;
+  color:#307C90
+}
+
 /* reponsive media */
 @media all and (max-width:1000px) {
   .hero {
@@ -642,7 +687,7 @@ footer{
    }
   .aboutme article{
     min-width: 19rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     font-size: 1rem;
      }
   .second {
@@ -683,4 +728,409 @@ color:#307C90
   }
 
 
- 
+ /*  */
+
+
+
+.block h6{
+display: inline-block;
+}
+
+/*  */
+/* CSS reset */
+.main,
+.main::after,
+.main::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.main { font-size: 62.5%; }
+
+.main {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+/* Typography =======================*/
+
+/* Headings */
+
+/* Main heading for card's front cover */
+.card-front__heading {
+  font-size: 1.5rem;
+  margin-top: .25rem;
+}
+
+/* Main heading for inside page */
+.inside-page__heading { 
+  padding-bottom: 1rem; 
+  width: 100%;
+}
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: .2rem;
+}
+
+.inside-page__heading--city,
+.card-front__text-view--city { color: #307c90 }
+
+.inside-page__heading--ski,
+.card-front__text-view--ski { color: #307c90; }
+
+.inside-page__heading--beach,
+.card-front__text-view--beach { color:#307c90; }
+
+.inside-page__heading--camping,
+.card-front__text-view--camping { color:#307c90; }
+
+/* Front cover */
+
+.card-front__tp { color: #fafbfa; }
+
+/* For pricing text on card front cover */
+.card-front__text-price {
+  font-size: 1.2rem;
+  margin-top: -.2rem;
+}
+
+/* Back cover */
+
+/* For inside page's body text */
+.inside-page__text {
+  color: #307c90;
+}
+
+/* Icons ===========================================*/
+
+.card-front__icon {
+  fill: #fafbfa;
+  font-size: 3vw;
+  height: 3.25rem;
+  margin-top: -.5rem;
+  width: 3.25rem;
+}
+
+/* Buttons =================================================*/
+
+.inside-page__btn {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: .7rem .75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .3s ease;
+  width: 90%;
+  z-index: 10;
+}
+
+.inside-page__btn::before { 
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all .3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.inside-page__btn--city { 
+  border-color: #307c90;
+  color: #307c90;
+}
+
+.inside-page__btn--city::before { 
+  background-color: #307c90;
+}
+
+.inside-page__btn--ski { 
+  border-color: #307c90;
+  color: #307c90;
+}
+
+.inside-page__btn--ski::before { 
+  background-color: #307c90;
+}
+
+.inside-page__btn--beach { 
+  border-color: #307c90;
+  color: #307c90;
+}
+
+.inside-page__btn--beach::before { 
+  background-color: #307c90;
+}
+
+.inside-page__btn--camping { 
+  border-color: #307c90;
+  color: #307c90;
+}
+
+.inside-page__btn--camping::before { 
+  background-color: #307c90;
+}
+
+.inside-page__btn:hover { 
+  color: #fafbfa;
+}
+
+.inside-page__btn:hover::before { 
+  transform: scaleY(1);
+}
+
+/* Layout Structure=========================================*/
+
+.main {
+  /* background: linear-gradient(
+    to bottom right,
+    #eee8dd,
+    #e3d9c6
+  ); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Container to hold all cards in one place */
+.card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+/* A container to hold the flip card and the inside page */
+.cardfl {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+.flip-card > * {
+  visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+.card-front {
+  background-color: #fafbfa;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Front side's top section */
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: center;
+  padding: .75rem;
+}
+
+.card-front__tp--city {
+  background: linear-gradient(
+    to bottom,
+    #9be9ff,
+    #307c90
+  );
+}
+
+.card-front__tp--ski {
+  background: linear-gradient(
+    to bottom,
+    #9be9ff,
+    #307c90
+  );
+}
+
+.card-front__tp--beach {
+  background: linear-gradient(
+    to bottom,
+    #9be9ff,
+    #307c90
+  );
+}
+
+.card-front__tp--camping {
+  background: linear-gradient(
+    to bottom,
+    #9be9ff,
+    #307c90
+  );
+}
+
+/* Front card's bottom section */
+.card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+.card-back {
+  background-color: #fafbfa;
+  transform: rotateY(180deg);
+}
+
+/* Specifically targeting the <video> element */
+.video__container {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Inside page */
+
+.inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+/* Functionality ====================================*/
+
+/* This is to keep the card centered (within its container) when opened */
+.cardfl:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+.cardfl:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+.cardfl:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+
+/* Footer ====================================*/
+/* 
+.footer {
+  background-color: #333;
+   margin-top: 3rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+} */
+
+.pro{
+  font-size: 4rem;
+  color: #fff;
+text-align: center;
+animation: proj 1s ease-in-out infinite alternate;
+margin-top: 2rem;
+}
+
+
+@-webkit-keyframes proj {
+from{
+  text-shadow: 0 0 20px #fff, 0 0 30px #087990, 0 0 40px #087990, 0 0 50px #087990, 0 0 60px #087990, 0 0 70px #087990, 0 0 80px #087990;
+}
+to {
+  text-shadow: 0 0 10px #fff, 0 0 20px  #fff, 0 0 30px #fbff00, 0 0 40px #fbff00, 0 0 50px #fbff00, 0 0 60px #fbff00, 0 0 70px #fbff00;
+}
+
+}
+.card-area{
+  margin: 0%;
+  padding: 0;
+}

@@ -1,12 +1,24 @@
 # portfolio
 this is is my first projest about 
 ## portfolio
-### this is my wire frame
-[wireframe](https://www.figma.com/file/2fWqlNEHj6Dp8QVfPplXg8/portfolio?t=iZbaeBKXiVgWwylu-0)
+This is the first project in Orange Coding Academy,It is a Portfolio to introduce my self
 
-### this is my mockup
-[mockup](https://www.figma.com/file/nMIvoUJkXKn4f70mFWwXCt/portfolio--mockup?t=iZbaeBKXiVgWwylu-0)
+### Languge and tools used
+* Html5
+* CSS
+- Bootstrap
 
 
-### this is the link the Live git hub
-[live github](https://daniaabughaush.github.io/portfolio/)
+## links for my work
+ |Name|The link|
+ |-----|-------|
+ |WireFrame|[wireframe](https://www.figma.com/file/2fWqlNEHj6Dp8QVfPplXg8/portfolio?t=iZbaeBKXiVgWwylu-0)|
+ |Mockup|[mockup](https://www.figma.com/file/nMIvoUJkXKn4f70mFWwXCt/portfolio--mockup?t=iZbaeBKXiVgWwylu-0)|
+ |Live github|[live github](https://daniaabughaush.github.io/portfolio/)|
+
+
+
+
+
+
+
