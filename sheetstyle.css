@@ -1,6 +1,10 @@
 html{
 scroll-behavior: smooth;
 }
+/* h2 in all page */
+h2{
+  font-family: cursive;
+}
 /* header */
 /* nav styling */
 nav {
@@ -80,8 +84,8 @@ nav li {
    justify-self: center;
    align-self: center;
 }
-#container{
-  justify-content: flex-end;
+.myname{
+  display: none;
 }
 /* give the 2hero photos the same position and dimention,
 the relative position is  a must here  */
@@ -173,7 +177,7 @@ grid-template-columns: repeat(3,1fr);
 /* the glitching article effect */
 #container {
     width: 70vw;
-   
+    /* justify-content: flex-end; */
    }
    .scanning{
     grid-area: 1/1/2/4;
@@ -440,9 +444,8 @@ grid-template-columns: repeat(3,1fr);
 .background h2{
   font-size: 1.5rem;
 }
-
-h2{
-  font-family: cursive;
+.background{
+  color: white;
 }
 
 /* tables for experience ,work,skill */
@@ -482,9 +485,10 @@ table td,th,tr{
 }
 
 
-/* cards my work*/
+/* cards mywork/my project and in footer*/
 .card{
   text-align: center;
+  border: #307c90;
 }
 .btn{
   background-color: #307C90;
@@ -495,13 +499,15 @@ table td,th,tr{
 .mywork h2{
   text-align: center;
 }
+.mywork{
+  margin-left: 9rem;
+  color: #307c90;
+}
 .card img{
   height:12rem;
 
 }
-.card{
-  border: #307c90;
-}
+
 .card-body{
   border:solid;
     border-top: hidden;
@@ -551,16 +557,18 @@ footer{
   box-shadow: .2rem .2rem white;
 }
 /* reponsive media */
-@media only screen and (max-width:1000px) {
+@media all and (max-width:1000px) {
   .hero {
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
             }
    .first{
     color:#307C90;
-font-size: 1rem;
-
+   font-size: 1rem;
+    min-width: 15rem;
   }
   .side{
     margin-top: 0;
@@ -571,10 +579,6 @@ font-size: 1rem;
       }
    .background{
     color:white
-   }
-   .meArticle article{
-    width: 20rem;
-  
    }
    .scan .face{
        width: 14rem;
@@ -588,38 +592,86 @@ font-size: 1rem;
   
   .profileimg img{
     width:14rem;
+    margin-left: 3rem;
   }
-  .aboutme{
-    margin: 0;
-    text-align: center;
-  }
-  .footerlist img{
+ .footerlist img{
     background-color: #307C90;
   }
   .cardfooter{
     background-color: white;
-    color:#307C90
+    color:#307C90;
+    margin-right: 2rem;
+    border: white;
+  
   }
   .face h3{
     margin: 0;
   }
   .scan{
     margin-top: 10rem;
+    margin-right: 4rem;
     
   }
+  /* table */
   .container{
   width:7rem;
   margin: 0;
   padding: 0;
+  font-size: .8rem;
 
   }
 .side{
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 .navbar li{
   font-size: .5rem;
 }
-
+ .aboutme h2{
+  font-size: 1.5rem;
+  margin-left: 7rem;
+   }
+  .aboutme article{
+    min-width: 20rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+   
+  }
+  .second {
+  min-width:20rem;
+  }
+  .second h2{
+    font-size: 1rem;
+  }
+.mywork{
+  margin-left: 2rem;
+color:#307C90
+}
+.card-title{
+  margin-left: 2rem;
+}
+.one img{
+  width: 4rem;
+}
+.mywork h2{
+  margin-top: 2rem;
+  margin-right:2rem
+}
+.break{
+  display: none;
+  visibility: hidden;
+}
+.hello h3{
+  display: none;
+}
+.myname{
+  display: block;
+  font-size: .85rem;
+}
+.myname h3{
+  font-weight: bold;
+}
   }
 
 
