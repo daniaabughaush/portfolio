@@ -74,9 +74,12 @@ nav li {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,13rem);
-      background:#307C90;
-     width: 100%;
+    width: 100%;
     height: 100%;
+  }
+  .herocontainer{
+    background:#307C90;
+
   }
 /* specify the hero img position */
 .scan{
@@ -498,10 +501,14 @@ table td,th,tr{
 }
 .mywork h2{
   text-align: center;
+  margin-top: 1rem;
+margin-right: 9rem;
 }
 .mywork{
   margin-left: 9rem;
-  color: #307c90;
+}
+.qulifiqation{
+  background-color: #307c90;
 }
 .card img{
   height:12rem;
@@ -559,16 +566,17 @@ footer{
 /* reponsive media */
 @media all and (max-width:1000px) {
   .hero {
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
             }
    .first{
-    color:#307C90;
+    /* color:#307C90; */
    font-size: 1rem;
-    min-width: 15rem;
+    min-width: 14rem;
+    text-align: center;
   }
   .side{
     margin-top: 0;
@@ -582,7 +590,7 @@ footer{
    }
    .scan .face{
        width: 14rem;
-    height:14rem;
+      height:14rem;
        background-size:14rem ;
 }
 
@@ -614,7 +622,7 @@ footer{
   }
   /* table */
   .container{
-  width:7rem;
+  width:7vw;
   margin: 0;
   padding: 0;
   font-size: .8rem;
@@ -633,11 +641,10 @@ footer{
   margin-left: 7rem;
    }
   .aboutme article{
-    min-width: 20rem;
+    min-width: 19rem;
     margin-left: 1rem;
     font-size: 1rem;
-   
-  }
+     }
   .second {
   min-width:20rem;
   }
@@ -645,7 +652,8 @@ footer{
     font-size: 1rem;
   }
 .mywork{
-  margin-left: 2rem;
+  margin-left: 1rem;
+ 
 color:#307C90
 }
 .card-title{
